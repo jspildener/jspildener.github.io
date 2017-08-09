@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+//random number to guess and gem number generation
+
     var randomNumber = Math.floor((Math.random() * 120) + 1);
     console.log(randomNumber);
     $("#numberToGuess").text(randomNumber);
@@ -20,7 +22,7 @@ $(document).ready(function() {
     var resetOutcome = function() {
         $("#outcome").text("");
     }
-
+//game reset
     var resetGame = function() {
         randomNumber = Math.floor((Math.random() * 120) + 1);
         $("#numberToGuess").text(randomNumber);
@@ -32,7 +34,7 @@ $(document).ready(function() {
         $("#totalScore").text(totalScore);
 
     }
-
+//when user wins, loses, or can keep playing game
     var checkWinLoss = function() {
         if (totalScore === randomNumber) {
             totalWins++;
@@ -53,6 +55,7 @@ $(document).ready(function() {
         }
     }
 
+//gem clicks and display to total score
     $("#redGem").on("click", function() {
         totalScore = totalScore + redGem;
         console.log(totalScore);
