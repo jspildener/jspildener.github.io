@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("../images/background.png")
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    border: 10px;
+    color: #202c39;
+    background: #39a2ae;
+    padding: 10px;
+}
+
+.rules {
+    background: #17BEBB;
+    padding: 15px;
+    color: #FBFFFE;
+    font-size: 18px;
+}
+
+#randomNumber {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background: #ACFCD9;
+    padding: 15px;
+    font-size: 18px;
+    color: #271F30;
+    text-align: center;
+}
+
+#scoreBoard {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background: #5DD9C1;
+    padding: 15px;
+    color: #FBFFFE;
+    font-size: 18px;
+}
+
+.button {
+    height: 62px;
+    width: 62px;
+    margin: 5px;
+}
+
+.total {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background: #75F4B3;
+    padding: 15px;
+    color: #271F30;
+    text-align: center;
+}
