@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cleveland Trivia!</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div>
+        <div id="startPage">
+            <div class="jumbotron">
+                <div class="container">
+                    <h1 class="text-center">Cleveland Trivia!!</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mainButton col-md-4"></div>
+                <button id="startGame" type="button" class="btn btn-primary btn-lg">START</button>
+            </div>
+        </div>
+        <div id="questionPage" style="display:none;">
+            <div class="jumbotron">
+                <div class="container">
+                    <h1 class="text-center">Cleveland Trivia!!</h1>
+                    <h2>Time Remaining: <span id="countDown"></span></h2>
+                </div>
+            </div>
+            <form>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-1">
+                        <div id="question0" class="questionGroup">
+                            <p>1. The following movies were partially filmed in Cleveland, except?</p>
+                            <input type="radio" name="answer0" value="wrong"> A Christmas Story
+                            <br>
+                            <input type="radio" name="answer0" value="wrong"> The Avengers
+                            <br>
+                            <input type="radio" name="answer0" value="wrong"> Shawshank Redemption
+                            <br>
+                            <input type="radio" name="answer0" value="correct"> Jurassic Park
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-1">
+                        <div id="question1" class="questionGroup" style="display:none;">
+                            <p>2. Cleveland was the home to the first ever electric traffic light.</p>
+                            <input type="radio" name="answer1" value="correct"> True
+                            <br>
+                            <input type="radio" name="answer1" value="wrong"> False
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-1">
+                        <div id="question2" class="questionGroup" style="display:none;">
+                            <p>3. Cleveland was the birthplace of what superhero?</p>
+                            <input type="radio" name="answer2" value="wrong"> Mysterion
+                            <br>
+                            <input type="radio" name="answer2" value="correct"> Superman
+                            <br>
+                            <input type="radio" name="answer2" value="wrong"> Wonder Woman
+                            <br>
+                            <input type="radio" name="answer2" value="wrong"> Batman
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-1">
+                        <div id="question3" class="questionGroup" style="display:none;">
+                            <p>4. The Free Stamp located in Clevaland's Willard Park was created by what artist?</p>
+                            <input type="radio" name="answer3" value="wrong"> Banksy
+                            <br>
+                            <input type="radio" name="answer3" value="wrong"> Picasso
+                            <br>
+                            <input type="radio" name="answer3" value="correct"> Claes Oldenberg
+                            <br>
+                            <input type="radio" name="answer3" value="wrong"> Jeff Koons
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-1">
+                        <div id="question4" class="questionGroup" style="display:none;">
+                            <p>5. Cleveland's Playhouse Square is the second largest theater complex in te U.S.</p>
+                            <input type="radio" name="answer4" value="correct"> True
+                            <br>
+                            <input type="radio" name="answer4" value="wrong"> False
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-1">
+                        <div id="question5" class="questionGroup lastQuestion" style="display:none;">
+                            <p>6. What street in Cleveland was known as "Millionaire's Row" in the late 19th and early 20th century?</p>
+                            <input type="radio" name="answer5" value="wrong"> Carnegie Avenue
+                            <br>
+                            <input type="radio" name="answer5" value="wrong"> Chester Avenue
+                            <br>
+                            <input type="radio" name="answer5" value="wrong"> Detroit Avenue
+                            <br>
+                            <input type="radio" name="answer5" value="correct"> Euclid Avenue
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-1">
+                    <button type="button" class="btn" id="nextQuestion">Next Question</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-1">
+                    <button type="button" class="btn btn-success" style="display:none;" id="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div id="endPage" style="display:none;">
+            <div class="jumbotron">
+                <div class="container">
+                    <h1 class="text-center">Cleveland Trivia!!</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-1">
+                    <p>Correct Answers: <span id="correctScore"></span></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-1">
+                    <p>Wrong Answers: <span id="incorrectScore"></span></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-1">
+                    <p>Unaswered Questions: <span id="unansweredQuestions"></span></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 col-md-offset-3">
+                <img class="fireworks" style="display:none;" src="http://www.animatedimages.org/data/media/492/animated-fireworks-image-0051.gif"/>
+                </div>
+                <div class="col-md-5 col-md-offset-5">
+                <img class="fireworks" style="display:none;" src="http://www.animatedimages.org/data/media/492/animated-fireworks-image-0051.gif"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>

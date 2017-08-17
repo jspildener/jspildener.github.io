@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("../images/cleveland.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center bottom;
+}
+
+.jumbotron{
+	background: #030027;
+	color: #9E0031;
+}
+#questionPage, #endPage{
+	font-size: 25px;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn {
+  color: #c44536;
+  background-color: #392A16;
+  border-color: #285e8e;
+}
