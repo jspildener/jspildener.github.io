@@ -1,0 +1,17 @@
+body {
+    font-family: 'PT Serif', serif;
+    background-image: url("../images/grass.jpg");
+}
+
+.jumbotron, .dogBreed, .btn-success {
+    background: #4E6E58;
+    color: #BFEDC1;
+}
+
+.dogBreed{
+	margin: 10px;
+}
+p {
+color: #BFEDC1;
+font-size: 150%;
+}

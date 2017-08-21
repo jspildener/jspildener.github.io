@@ -1,0 +1,33 @@
+<DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>GifTastic</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+        <body>
+            <div class="container">
+                <div class="jumbotron">
+                    <h1 class="text-center">Show me the PUPPIES!</h1>
+                </div>
+                <div id="dogBreedButtons" class="btn"></div>
+                <form id="dogForm">
+                    <label class="question" for="dogInput"><p>What's your favorite dog?!</p></label>
+                    <br>
+                    <input type="text" id="dogInput">
+                    <br>
+                    <br>
+                    <input type="submit" id="addDog" class="btn btn-success" value="Submit">
+                </form>
+                <!--dog gifs get placed here-->
+                <div id="dogsView"></div>
+            </div>
+            </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <script src="assets/javascript/main.js"></script>
+        </body>
+
+    </html>
