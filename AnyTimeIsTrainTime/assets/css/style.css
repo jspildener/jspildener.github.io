@@ -1,0 +1,19 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("../images/backgrounds-5.png");
+}
+.jumbotron{
+	background-image: url("../images/backgrounds-6.png");
+	background-color: #DCDEE3;
+	border: 1px;
+	border-color: #fff;
+}
+.container-shadow {
+	box-shadow: 10px 10px 5px #888888;
+}
+.btn{
+	box-shadow: 3px 3px 1px #888888;
+}
+.panel-heading, .btn{
+	background-image: url("../images/backgrounds-5.png");
+}
