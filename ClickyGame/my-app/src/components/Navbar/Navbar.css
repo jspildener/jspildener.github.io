@@ -1,0 +1,29 @@
+.navbar li {
+  display: inline-block;
+  text-align: center;
+}
+
+.item1 {
+  font-weight: bold;
+}
+
+.item2 {
+  width: 50%;
+}
+
+.item3 {
+  width: 50%;
+}
+
+.navbar {
+  background: #cbeaa6;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+}
+
+li {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  font-size: 40px;
+}
